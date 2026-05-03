@@ -7,9 +7,16 @@
     <meta name="author" content="Tyler Caffrey">
     <title>BYUI Mission Statement</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+    <select>
+        <option>Choose Mode</option>
+        <option value="dark">Dark</option>
+        <option value="light">Light</option>
+    </select>  
     <div id="content">
+
         <h1>MISSION STATEMENT</h1>
         <h2>BRIGHAM YOUNG UNIVERSITY-IDAHO</h2>
         <hr>
@@ -30,5 +37,46 @@
         <img src="byui-logo-blue.webp" alt="byui-logo-blue">
 
     </div>
+    <script>
+        let selectElem = document.querySelector('select');
+        let logo = document.querySelector('img');
+
+        selectElem.addEventListener('change', changeTheme);
+        let headingText = document.querySelector('h1');
+        let background = document.querySelector('#content')
+        let ps = document.querySelectorAll('p');
+        let listItems = document.querySelectorAll('li');
+        function changeTheme() 
+        {
+            let current = selectElem.value;
+            if (current == 'dark') {
+                document.body.style.backgroundColor = "#222220";
+                logo.setAttribute("src", "byui-logo-white.png");
+                headingText.style.color = 'white';
+                ps.forEach(p =>{
+                    p.style.color = 'white';
+                });
+                listItems.forEach(p =>{
+                    p.style.color = 'white';
+                });
+                background.style.borderColor = 'white';
+            } else {
+                document.body.style.backgroundColor = "white";
+                logo.setAttribute("src", "byui-logo-blue.webp"); 
+                headingText.style.color = 'black';
+
+                ps.forEach(p => {
+                    p.style.color = 'black';
+                });
+
+                listItems.forEach(li => {
+                    li.style.color = 'black';
+                });
+
+                background.style.borderColor = 'darkgrey';
+            }
+        }           
+            
+    </script>
 </body>
 </html>
