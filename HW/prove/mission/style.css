@@ -10,6 +10,7 @@ body
     border: 1px solid darkgrey;
     margin: 40px auto;
     padding: 50px;
+    
 }
 #paragraph{
     max-width: 75%;
@@ -30,6 +31,7 @@ h1, h2{
 h2{
     font-size: 12px;
     color: teal;
+    
 }
 img {
     width: 15%;
