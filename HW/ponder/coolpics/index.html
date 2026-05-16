@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+        <meta name="description" content="A page wth some cool pics of norris hotsprings that has a modal and menu buttons.">
+    <meta name="author" content="Tyler Caffrey">
+    <title>CoolPics</title>
     <link rel="stylesheet" href="style.css">
+    <script src="coolpics.js" defer></script>
 </head>
 <body>
     <header>
         <h1> Cool Pics</h1>
-        <p id="MenuButton">Menu</p>
+        <p class="MenuButton">Menu</p>
 
-        <div id="MenuItems">
+        <nav>
             <a href="#">Home</a>
             <a href="#">People</a>
             <a href="#">Places</a>
             <a href="#">About</a>
             <a href="#">Contact</a>
-        </div>
+        </nav>
     </header>
     <main>
         <h2>Current Work</h2>
@@ -32,7 +35,10 @@
             <img src="norris-sm.jpg" alt="cool pic">
             <img src="norris-sm.jpg" alt="cool pic">
         </div>
-
+        <dialog>
+            <img>
+            <button class="close-viewer">X</button>
+        </dialog>
     </main>
     <footer><p>Cool footer words oooooooh yeeeaaaah</p></footer>
 </body>

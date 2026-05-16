@@ -13,31 +13,37 @@ h1 {
     padding-bottom: 20px;
     text-align: center;
 }
-#MenuButton{
+.MenuButton{
     max-width: 200px;
     text-align: center;
     margin: 0 auto;
 }
-#MenuItems{
+nav{
     max-width: 500px;
     text-align: center;
     margin: 0 auto;
+}
+nav a{
+    color: black;
+
 }
 h2{
     max-width: 200px;
     margin: 0 auto;
     text-align: center;
 }
-img{
+#Images img{
     border: 5px solid white;
     max-width: 200px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }
 #Images{
     max-width: 80%;
     margin: 0 auto;
     display: grid;
     gap: 20px;
-
+    justify-items: center;
 }
 footer{
     background-color: skyblue;
@@ -49,13 +55,34 @@ p{
     max-width: 300px;
     margin: 0 auto;
 }
+.hide{
+    display: block;
+}
+
+dialog img {
+    width: 90%;
+    display: block;
+    margin: 20vh auto;
+}
+dialog {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.75);
+}
+.close-viewer {
+    position: absolute;
+    top: 10vh;
+    right: 2vh;
+    padding: 3px 6px;
+    font-size: 1.5em;
+}
 
 /* Media Queries */
 @media screen and (max-width: 400px){
-    #MenuItems{
+    nav{
         display: none;
     }
-    #MenuButton{
+    .MenuButton{
         display: block;
     }
     #Images{
@@ -64,11 +91,11 @@ p{
     }
 
 }
-@media screen and (min-width:400px) and (max-width: 700px){
-    #MenuItems{
+@media screen and (min-width:400px) and (max-width: 750px){
+    nav{
         display: none;
     }
-    #MenuButton{
+    .MenuButton{
         display: block;
     }
     #Images{
@@ -77,12 +104,12 @@ p{
     }
 
 }
-@media screen and (min-width: 700px){
-    #MenuItems{
+@media screen and (min-width: 750px){
+    nav{
         display: block;
 
     }
-    #MenuButton{
+    .MenuButton{
         display: none;
     }
     #Images{
