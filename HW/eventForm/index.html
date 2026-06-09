@@ -49,18 +49,25 @@
 
       <div class="studentField">
         <label for="studentID">Student ID#</label>
-        <input id="studentID" name="studentID" type="text" required />
+        <input id="studentID" name="studentID" type="text"/>
       </div>
       <div class="guestField">
         <label for="accessCode">Access Code</label>
-        <input id="accessCode" name="accessCode" type="text" required />
+        <input id="accessCode" name="accessCode" type="text"/>
       </div>
-      
+
       <button class="full" type="submit">Create Ticket</button>
+      <section id="output" aria-live="polite"></section>
+      <div id="successfulOutput" style="display: none;">
+         <h3>Ticket Created</h3>
+         <p id="displayName"></p>
+         <p id="displayType"></p>
+         <p id="displayDate"></p>
+      </div>
 
     </form>
 
-    <section id="output" aria-live="polite"></section>
+    
   </main>
 </body>
 </html>

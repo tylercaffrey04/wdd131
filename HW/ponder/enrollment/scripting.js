@@ -9,15 +9,34 @@ const course = {
             sectionNum: '2', roomNum: 'STC 112', enrolled: 26, days:"TTH", instructor:"Brother Alvey" 
         }
     ],
-    enrolledStudents: function(sectionNUm){
+    enrollStudent: function(sectionNUm){
         // find section from array
-        const section = this.sections;
+        const sectionIndex = this.sections.findIndex(section => {section.sectionNum == sectionNUm});
         
+        this.sections[sectionIndex].enrolled++;
+        renderSections(this.sections);
     }
 
 }
+function sectionTemplate(section) {
+    return `<tr>
+      <td>${section.sectionNum}</td>
+      <td>${section.roomNum}</td>
+      <td>${section.enrolled}</td>
+      <td>${section.days}</td>
+      <td>${section.instructor}</td></tr>`
+}
 
-const age = 29;
+function renderSections(sections) {
+    const html = sections.map(sectionTemplate);
+    document.querySelector("#sections").innerHTML = html.join("");
+}
 
+renderSections(course.sections);
+
+document.querySelector("#enrollStudent").addEventListener("click", function () {
+    const sectionNum = document.querySelector("#sectionNumber").value;
+    course.enrollStudent(sectionNum);
+});
 
 

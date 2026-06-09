@@ -50,7 +50,7 @@ button:hover {
     display: none;
 }
 
-#output {
+#output{
   margin-top: 1rem;
   font-weight: bold;
 }
