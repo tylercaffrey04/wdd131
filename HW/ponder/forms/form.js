@@ -25,8 +25,10 @@ form.addEventListener("submit", event =>{
     if(numCampus === "one" && getCheckedCampuses(campusSelected).length == 0){
         document.getElementById("output").textContent = "Please select a campus";
     }
-    if(!checkDateValidity()){
+    if(checkDateValidity()){
         document.getElementById("output").textContent = "Choose a future date";
     }
+    else
+        document.getElementById("output").textContent = "";
 
 })
