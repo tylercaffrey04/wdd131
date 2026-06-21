@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Card</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="card-container">
+        <div class="character-card" id="characterCard">
+            <img class="image" src="snortleblat.webp" alt="Character Image" class="char-img">
+            <h2 class="name">snortleblat</h2>
+            <p class="class">Class: <span id="charClass">Class</span></p>
+            <p>Level: <span id="level">1</span></p>
+            <p>Health: <span id="health">100</span>/100</p>
+            <p id="statusMessage" class="status-msg"></p>
+        </div>
+
+        <div class="controls">
+            <button id="attackBtn">Take Damage (-20)</button>
+            <button id="levelBtn">Level Up (+1)</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
